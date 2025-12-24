@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uilover.project262.R
 import com.uilover.project262.activities.ItemsListActivity
 import com.uilover.project262.databinding.ViewholderCategoryBinding
-import com.uilover.project262.domain.CategoryModel
 
 class CategoryAdapter(val items: MutableList<CategoryModel>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {

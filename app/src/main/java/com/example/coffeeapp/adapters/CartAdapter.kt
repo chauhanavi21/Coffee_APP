@@ -10,7 +10,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.uilover.project262.Helper.ChangeNumberItemsListener
 import com.uilover.project262.Helper.ManagmentCart
 import com.uilover.project262.databinding.ViewholderCartBinding
-import com.uilover.project262.domain.ItemsModel
 
 class CartAdapter(
     private val listItemSelected: ArrayList<ItemsModel>,

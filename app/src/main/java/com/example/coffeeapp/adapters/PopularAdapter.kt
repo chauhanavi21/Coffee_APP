@@ -11,8 +11,8 @@ import com.uilover.project262.databinding.ViewholderPopularBinding
 import kotlin.io.root
 import kotlin.jvm.java
 
-class ItemListCategoryAdapter(val items: MutableList<ItemsModel>) :
-    RecyclerView.Adapter<ItemListCategoryAdapter.Viewholder>() {
+class PopularAdapter(val items: MutableList<ItemsModel>) :
+    RecyclerView.Adapter<PopularAdapter.Viewholder>() {
     lateinit var context: Context
 
     class Viewholder(val binding: ViewholderPopularBinding) :
@@ -22,13 +22,13 @@ class ItemListCategoryAdapter(val items: MutableList<ItemsModel>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ItemListCategoryAdapter.Viewholder {
+    ): PopularAdapter.Viewholder {
         context = parent.context
         val binding = ViewholderPopularBinding.inflate(LayoutInflater.from(context), parent, false)
         return Viewholder(binding)
     }
 
-    override fun onBindViewHolder(holder: ItemListCategoryAdapter.Viewholder, position: Int) {
+    override fun onBindViewHolder(holder: PopularAdapter.Viewholder, position: Int) {
         holder.binding.titleTxt.text = items[position].title
         holder.binding.priceTxt.text = "$" + items[position].price.toString()
         holder.binding.subtitleTxt.text = items[position].extra
@@ -38,7 +38,7 @@ class ItemListCategoryAdapter(val items: MutableList<ItemsModel>) :
             .into(holder.binding.pic)
 
         holder.itemView.setOnClickListener {
-        val intent= Intent(context, DetailActivity::class.java)
+            val intent= Intent(context, DetailActivity::class.java)
             intent.putExtra("object",items[position])
             context.startActivity(intent)
         }

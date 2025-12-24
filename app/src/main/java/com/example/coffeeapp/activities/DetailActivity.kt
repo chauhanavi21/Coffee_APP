@@ -7,7 +7,6 @@ import com.bumptech.glide.Glide
 import com.uilover.project262.Helper.ManagmentCart
 import com.uilover.project262.R
 import com.uilover.project262.databinding.ActivityDetailBinding
-import com.uilover.project262.domain.ItemsModel
 
 class DetailActivity : AppCompatActivity() {
     lateinit var binding: ActivityDetailBinding
